@@ -12,14 +12,20 @@
   <% end %>
 
   <div class="form-group">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :image %>
     <%= f.file_field :image, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+  <div class="form-group">
+    <%= f.label :description, "Image summary (1 or 2 sentences)" %><br>
+    <%= f.text_field :description, class: "form-control" %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
