@@ -1,4 +1,6 @@
-<% if current_user.admin == false %>
+<% if !user_signed_in? %>
+  <%= "Access Not Granted" %>
+<% elsif current_user.admin == false %>
   <%= "Access Not Granted" %>
 <% else %>
   <table>
