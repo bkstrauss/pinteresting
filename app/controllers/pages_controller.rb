@@ -7,4 +7,8 @@ class PagesController < ApplicationController
 
   def challenges
   end
+
+  def admin
+  	@pins = Pin.all.order("created_at DESC")
+  end
 end

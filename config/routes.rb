@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "pins#index"
   get "about" => "pages#about"
   get "challenges" => "pages#challenges"
+  get "admin" => "pages#admin"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
