@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :pins
 
   devise_for :users
-  root "pins#index"
+  root "pages#challenges"
   get "about" => "pages#about"
   get "challenges" => "pages#challenges"
   get "admin" => "pages#admin"
