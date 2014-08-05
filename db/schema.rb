@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731031403) do
+ActiveRecord::Schema.define(version: 20140805204916) do
 
   create_table "pins", force: true do |t|
     t.string   "description"
@@ -43,6 +43,10 @@ ActiveRecord::Schema.define(version: 20140731031403) do
     t.datetime "updated_at"
     t.string   "name"
     t.boolean  "admin",                  default: false
+    t.string   "college"
+    t.integer  "graduation_year"
+    t.boolean  "has_graduated"
+    t.string   "degree"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

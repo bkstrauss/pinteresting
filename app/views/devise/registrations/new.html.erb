@@ -21,6 +21,27 @@
 			  </div>
 		  </div>
 
+	  	  <div class="form-group">
+	  		  <div>
+	  	  		<%= f.label :college, 'College / University' %><br />
+	  	   	 <%= f.text_field :college, :autofocus => true, class: "form-control" %>
+	  	 	 </div>
+	  	  </div>
+
+	      <div class="form-group">
+	    	  <div>
+	    	  	<%= f.label :graduation_year, 'Graduation Year (or Expected)' %><br />
+	    	    <%= f.text_field :graduation_year, :autofocus => true, class: "form-control" %>
+	    	  </div>
+	      </div>
+
+	      <div class="form-group">
+	    	  <div>
+	    	  	<%= f.label :degree, 'Degree (e.g., Bachelors, Masters, Associates)' %><br />
+	    	    <%= f.text_field :degree, :autofocus => true, class: "form-control" %>
+	    	  </div>
+	      </div>
+
 		  <div class="form-group">
 			<div>
 			  <%= f.label :password %><br />

@@ -10,5 +10,11 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
    devise_parameter_sanitizer.for(:sign_up) << :name
    devise_parameter_sanitizer.for(:account_update) << :name
+   devise_parameter_sanitizer.for(:sign_up) << :college
+   devise_parameter_sanitizer.for(:account_update) << :college
+   devise_parameter_sanitizer.for(:sign_up) << :graduation_year
+   devise_parameter_sanitizer.for(:account_update) << :graduation_year
+   devise_parameter_sanitizer.for(:sign_up) << :degree
+   devise_parameter_sanitizer.for(:account_update) << :degree
  end
 end
