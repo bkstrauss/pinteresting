@@ -18,7 +18,7 @@
     <tbody>
       <% @pins.each do |pin| %>
         <tr>
-          <td><%= pin.image.url %></td>
+          <td><a href="<%= pin.image.url %>"></td>
           <td><%= pin.description %></td>
           <td><%= pin.company_name %></td>
           <td><%= pin.user.name %></td>
