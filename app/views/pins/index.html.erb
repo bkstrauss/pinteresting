@@ -15,8 +15,7 @@
 		<table class="table table-bordered">
 		  <thead>
 		    <tr>
-		      <th>Image</th>
-		      <th>Description</th>
+		      <th>Submission</th>
 		      <th>Company</th>
 		      <th>Evaluation Status</th>
 		      <th colspan="4"></th>
@@ -27,8 +26,7 @@
 		    <% @pins.each do |pin| %>
 		      <tr>
 		      	<% if pin.user == current_user %>
-			      <td><%= pin.image.url %></td>
-			      <td><%= pin.description %></td>
+			      <td><%= link_to pin.description, pin.image.url %></td>
 			      <td><%= pin.company_name %></td>
 			      <td><%= pin.status %></td>
 		          <td><%= link_to 'Delete submission', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
