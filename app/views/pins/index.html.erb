@@ -17,8 +17,9 @@
 		    <tr>
 		      <th>Submission</th>
 		      <th>Company</th>
+		      <th>Date Submitted</th>
 		      <th>Evaluation Status</th>
-		      <th colspan="4"></th>
+		      <th colspan="5"></th>
 		    </tr>
 		  </thead>
 
@@ -28,6 +29,7 @@
 		      	<% if pin.user == current_user %>
 			      <td><%= link_to pin.description, pin.image.url %></td>
 			      <td><%= pin.company_name %></td>
+			      <td><%= "#{pin.created_at.month}/#{pin.created_at.day}/#{pin.created_at.year}" %></td>
 			      <td><%= pin.status %></td>
 		          <td><%= link_to 'Delete submission', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		        <% end %>
@@ -38,5 +40,5 @@
 	<% end %>
 	<br>
 
-	<%= link_to 'New Submission', new_pin_path %>
+	<%= link_to 'Challenges', challenges_path %>
 <% end %>
